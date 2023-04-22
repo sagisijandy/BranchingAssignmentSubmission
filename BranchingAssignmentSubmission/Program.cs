@@ -19,7 +19,15 @@ namespace BranchingAssignmentSubmission
             Console.WriteLine("What is your Package weight?");
             string packageWeight = Console.ReadLine();
             int packweight = Convert.ToInt32(packageWeight);
-            string result = packweight >= 50 ? "Package too heavy to be shipped via Package Express. Have a good day." : "Package Accepted";
+            string result = Console.ReadLine();
+             if (packweight >= 50) 
+            {
+                Console.WriteLine("Your Package is too heavy to be shipped via Package Express. Have a good day.");
+            }
+            else
+            {
+                Console.WriteLine("Package Accepted");
+            }
             Console.WriteLine(result);
             Console.ReadLine();
 
@@ -41,19 +49,32 @@ namespace BranchingAssignmentSubmission
             Console.WriteLine("Your package length is:" + packageLength);
             Console.ReadLine();
 
-            int totalDImension = (packWidth * packheight * packlength);
+            int totalDmension = (packWidth * packheight * packlength);
 
             Console.WriteLine("What is the total dimension?");
             string totalDimension = Console.ReadLine();
             int totdimension = Convert.ToInt32(totalDimension);
-            string resultTotal = totdimension >= 50 ? "Package too big to be shipped via Package Express. Have a good day." : "Package Accepted";
+            string resultTotal = Console.ReadLine();
+
+            if (totdimension >= 50)
+            {
+                Console.WriteLine(" Your package is too heavy to be shipped via Package Express. Have a good day. ");
+            }
+            else 
+            {
+                Console.WriteLine("Package Accepted");
+            }
+
             Console.WriteLine(resultTotal);
             Console.ReadLine();
 
             var DollarValue = totalDimension;
-
             Console.WriteLine(DollarValue);
             Console.ReadLine();
+
+            Console.WriteLine("Your estimated total for shipping this package is: $528.00 " + "Thank you!");
+            Console.ReadLine();
+
 
 
 
